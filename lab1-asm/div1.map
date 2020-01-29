@@ -1,0 +1,226 @@
+Archive member included to satisfy reference by file (symbol)
+
+/usr/local/Cellar/gcc-arm-none-eabi/20180627/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_udivsi3.o)
+                              lib.o (__aeabi_uidiv)
+/usr/local/Cellar/gcc-arm-none-eabi/20180627/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
+                              /usr/local/Cellar/gcc-arm-none-eabi/20180627/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_udivsi3.o) (__aeabi_idiv0)
+
+Allocating common symbols
+Common symbol       size              file
+
+line_buf            0x50              main.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000000000000 0x0000000000040000 xr
+RAM              0x0000000020000000 0x0000000000004000 xrw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD div1.o
+LOAD main.o
+LOAD lib.o
+LOAD startup.o
+LOAD /usr/local/Cellar/gcc-arm-none-eabi/20180627/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a
+
+.text           0x0000000000000000      0x8f8
+ *(.vectors)
+ .vectors       0x0000000000000000       0xc0 startup.o
+                0x0000000000000000                __vectors
+ *(.text*)
+ .text          0x00000000000000c0       0x16 div1.o
+                0x00000000000000c0                foo
+ *fill*         0x00000000000000d6        0x2 
+ .text          0x00000000000000d8      0x278 main.o
+                0x00000000000000d8                serial_putc
+                0x0000000000000104                serial_init
+                0x0000000000000190                serial_getc
+                0x00000000000001b0                serial_puts
+                0x00000000000001c8                serial_printf
+                0x00000000000001e8                accept
+                0x000000000000024c                getnum
+                0x0000000000000284                init
+ .text          0x0000000000000350      0x230 lib.o
+                0x00000000000003aa                f_storec
+                0x00000000000003b4                atoi
+                0x00000000000003f4                xtou
+                0x000000000000042e                _do_print
+                0x0000000000000538                do_print
+                0x000000000000054c                sprintf
+ .text          0x0000000000000580      0x17c startup.o
+                0x0000000000000580                nmi_handler
+                0x0000000000000580                ecb_handler
+                0x0000000000000580                hardfault_handler
+                0x0000000000000580                uart_handler
+                0x0000000000000580                lpcomp_handler
+                0x0000000000000580                systick_handler
+                0x0000000000000580                timer0_handler
+                0x0000000000000580                swi0_handler
+                0x0000000000000580                rtc0_handler
+                0x0000000000000580                rtc1_handler
+                0x0000000000000580                swi4_handler
+                0x0000000000000580                timer2_handler
+                0x0000000000000580                timer1_handler
+                0x0000000000000580                wdt_handler
+                0x0000000000000580                swi5_handler
+                0x0000000000000580                svc_handler
+                0x0000000000000580                swi1_handler
+                0x0000000000000580                qdec_handler
+                0x0000000000000580                spi0_twi0_handler
+                0x0000000000000580                rng_handler
+                0x0000000000000580                temp_handler
+                0x0000000000000580                power_clock_handler
+                0x0000000000000580                gpiote_handler
+                0x0000000000000580                swi2_handler
+                0x0000000000000580                ccm_aar_handler
+                0x0000000000000580                pendsv_handler
+                0x0000000000000580                spin
+                0x0000000000000580                swi3_handler
+                0x0000000000000580                spi1_twi1_handler
+                0x0000000000000580                radio_handler
+                0x0000000000000580                adc_handler
+                0x00000000000005c8                __reset
+                0x000000000000065c                irq_priority
+                0x00000000000006bc                enable_irq
+                0x00000000000006cc                disable_irq
+                0x00000000000006dc                clear_pending
+                0x00000000000006ec                reschedule
+ .text          0x00000000000006fc      0x114 /usr/local/Cellar/gcc-arm-none-eabi/20180627/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_udivsi3.o)
+                0x00000000000006fc                __udivsi3
+                0x00000000000006fc                __aeabi_uidiv
+                0x0000000000000808                __aeabi_uidivmod
+ .text          0x0000000000000810        0x4 /usr/local/Cellar/gcc-arm-none-eabi/20180627/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
+                0x0000000000000810                __aeabi_ldiv0
+                0x0000000000000810                __aeabi_idiv0
+ *(.rodata*)
+ .rodata.str1.4
+                0x0000000000000814       0x77 main.o
+                                         0x7f (size before relaxing)
+ *fill*         0x000000000000088b        0x1 
+ .rodata        0x000000000000088c       0x58 lib.o
+ .rodata.str1.4
+                0x00000000000008e4       0x14 lib.o
+                                         0x11 (size before relaxing)
+                0x00000000000008f8                . = ALIGN (0x4)
+                0x00000000000008f8                __etext = .
+
+.glue_7         0x00000000000008f8        0x0
+ .glue_7        0x00000000000008f8        0x0 linker stubs
+
+.glue_7t        0x00000000000008f8        0x0
+ .glue_7t       0x00000000000008f8        0x0 linker stubs
+
+.vfp11_veneer   0x00000000000008f8        0x0
+ .vfp11_veneer  0x00000000000008f8        0x0 linker stubs
+
+.v4_bx          0x00000000000008f8        0x0
+ .v4_bx         0x00000000000008f8        0x0 linker stubs
+
+.iplt           0x00000000000008f8        0x0
+ .iplt          0x00000000000008f8        0x0 main.o
+
+.rel.dyn        0x00000000000008f8        0x0
+ .rel.iplt      0x00000000000008f8        0x0 main.o
+
+.data           0x0000000020000000        0x0 load address 0x00000000000008f8
+                0x0000000020000000                __data_start = .
+ *(.data*)
+ .data          0x0000000020000000        0x0 div1.o
+ .data          0x0000000020000000        0x0 main.o
+ .data          0x0000000020000000        0x0 lib.o
+ .data          0x0000000020000000        0x0 startup.o
+ .data          0x0000000020000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20180627/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_udivsi3.o)
+ .data          0x0000000020000000        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20180627/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                __data_end = .
+
+.igot.plt       0x0000000020000000        0x0 load address 0x00000000000008f8
+ .igot.plt      0x0000000020000000        0x0 main.o
+
+.bss            0x0000000020000000       0x54 load address 0x00000000000008f8
+                0x0000000020000000                __bss_start = .
+ *(.bss*)
+ .bss           0x0000000020000000        0x0 div1.o
+ .bss           0x0000000020000000        0x4 main.o
+ .bss           0x0000000020000004        0x0 lib.o
+ .bss           0x0000000020000004        0x0 startup.o
+ .bss           0x0000000020000004        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20180627/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_udivsi3.o)
+ .bss           0x0000000020000004        0x0 /usr/local/Cellar/gcc-arm-none-eabi/20180627/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
+ *(COMMON)
+ COMMON         0x0000000020000004       0x50 main.o
+                0x0000000020000004                line_buf
+                0x0000000020000054                . = ALIGN (0x4)
+                0x0000000020000054                __bss_end = .
+                0x0000000020000054                __end = .
+                0x0000000020004000                __stack = (ORIGIN (RAM) + LENGTH (RAM))
+                0x0000000020003800                __stack_limit = (__stack - 0x800)
+                0x0000000000000001                ASSERT ((__stack_limit >= __end), region RAM overlaps with stack)
+OUTPUT(div1.elf elf32-littlearm)
+
+.ARM.attributes
+                0x0000000000000000       0x2d
+ .ARM.attributes
+                0x0000000000000000       0x21 div1.o
+ .ARM.attributes
+                0x0000000000000021       0x31 main.o
+ .ARM.attributes
+                0x0000000000000052       0x31 lib.o
+ .ARM.attributes
+                0x0000000000000083       0x31 startup.o
+ .ARM.attributes
+                0x00000000000000b4       0x1e /usr/local/Cellar/gcc-arm-none-eabi/20180627/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_udivsi3.o)
+ .ARM.attributes
+                0x00000000000000d2       0x1e /usr/local/Cellar/gcc-arm-none-eabi/20180627/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_dvmd_tls.o)
+
+.comment        0x0000000000000000       0x7f
+ .comment       0x0000000000000000       0x7f main.o
+                                         0x80 (size before relaxing)
+ .comment       0x000000000000007f       0x80 lib.o
+ .comment       0x000000000000007f       0x80 startup.o
+
+.debug_info     0x0000000000000000      0xabe
+ .debug_info    0x0000000000000000      0x3a1 main.o
+ .debug_info    0x00000000000003a1      0x564 lib.o
+ .debug_info    0x0000000000000905      0x1b9 startup.o
+
+.debug_abbrev   0x0000000000000000      0x4d0
+ .debug_abbrev  0x0000000000000000      0x19e main.o
+ .debug_abbrev  0x000000000000019e      0x228 lib.o
+ .debug_abbrev  0x00000000000003c6      0x10a startup.o
+
+.debug_loc      0x0000000000000000      0x7d9
+ .debug_loc     0x0000000000000000      0x150 main.o
+ .debug_loc     0x0000000000000150      0x5c1 lib.o
+ .debug_loc     0x0000000000000711       0xc8 startup.o
+
+.debug_aranges  0x0000000000000000       0x60
+ .debug_aranges
+                0x0000000000000000       0x20 main.o
+ .debug_aranges
+                0x0000000000000020       0x20 lib.o
+ .debug_aranges
+                0x0000000000000040       0x20 startup.o
+
+.debug_line     0x0000000000000000      0x31f
+ .debug_line    0x0000000000000000      0x15d main.o
+ .debug_line    0x000000000000015d      0x132 lib.o
+ .debug_line    0x000000000000028f       0x90 startup.o
+
+.debug_str      0x0000000000000000      0x23f
+ .debug_str     0x0000000000000000      0x14a main.o
+                                        0x160 (size before relaxing)
+ .debug_str     0x000000000000014a       0x54 lib.o
+                                        0x145 (size before relaxing)
+ .debug_str     0x000000000000019e       0xa1 startup.o
+                                        0x154 (size before relaxing)
+
+.debug_frame    0x0000000000000000      0x278
+ .debug_frame   0x0000000000000000       0xc8 main.o
+ .debug_frame   0x00000000000000c8       0xfc lib.o
+ .debug_frame   0x00000000000001c4       0x94 startup.o
+ .debug_frame   0x0000000000000258       0x20 /usr/local/Cellar/gcc-arm-none-eabi/20180627/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/libgcc.a(_udivsi3.o)
+
+.debug_ranges   0x0000000000000000       0x50
+ .debug_ranges  0x0000000000000000       0x50 lib.o

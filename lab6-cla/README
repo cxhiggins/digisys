@@ -1,0 +1,10 @@
+University of Oxford
+Honour School of Computer Science
+DIGITAL SYSTEMS
+lab6-cla
+
+This Haskell implementation of a carry-lookahead adder is here to
+preserve materials from the old Digital Hardware course in case they
+are useful in the future.  Though fascinating, the subject of
+efficient circuits for addition is not one we are likely to have time
+for during the course.
